@@ -8,17 +8,22 @@ int main()
 {
     ll v,i,j;
     
-    cin>>v;
+    cin>>v; // example 5
     ll a[v][v];
     
     for(i=0;i<v;i++)
     {
         for(j=0;j<v;j++)
         {
-            
             cin>>a[i][j];
         }
     }
+/* INPUT FORMAT
+0 2 0 6 0 
+2 0 3 8 5 
+0 3 0 0 7  
+6 8 0 0 9  
+0 5 7 9 0*/ 
     bool g[v][v];
     memset(g,false,sizeof(g));
     ll flag=0;
