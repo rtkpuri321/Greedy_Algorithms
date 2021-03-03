@@ -47,12 +47,12 @@ int main()
     }
     for(i=0;i<v;i++)
     {
-        for(j=0;j<v-1-i;j++)
+        for(j=0;j<v-1-i;j++)    
         {
             if(b[j]>b[j+1])
             {
-                swap(b[j],b[j+1]);
-                swap(v1[j],v1[j+1]);
+                swap(b[j],b[j+1]);      // Preferably do sorting using merge sort or heap sort for O(nlogn) complexity.
+                swap(v1[j],v1[j+1]);    // instead of bubble sort which has O(n^2).
                 swap(v2[j],v2[j+1]);
             }
         }
