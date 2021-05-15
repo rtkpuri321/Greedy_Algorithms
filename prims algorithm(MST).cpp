@@ -35,7 +35,7 @@ int main()
     ll p[v],pos;
     ll n=0;
     d[i]=0;
-    while(n!=1)
+    while(n!=1)//if all are True
     {
         unordered_map<bool,ll>b;
         ll mn=10000;
@@ -44,10 +44,11 @@ int main()
         {
             if(a[i][j]<d[j] && a[i][j]>0)
             {
-                d[j]=a[i][j];
-                p[j]=i;
+                d[j]=a[i][j];//distance
+                p[j]=i;//parent
             }
         }
+        
         for(j=0;j<v;j++)
         {
             if(d[j]<mn && d[j]!=0 && m[j]!=true)
