@@ -14,7 +14,7 @@ class Solution
     
     
     struct act{
-        int start,finish,si;
+        int start,finish;
     };
     
     static bool actcomp(act s1,act s2)
@@ -25,23 +25,22 @@ class Solution
     int maxMeetings(int s[], int e[], int n)
     {
         int i,j;
-        act siz;
-        siz.si=n;
-        act a[siz.si];
+        
+        act a[n];
         
         
-        for(i=0;i<siz.si;i++)
+        for(i=0;i<n;i++)
         {
             a[i].start=s[i];
             a[i].finish=e[i];
         }
         
-        sort(a,a+siz.si,actcomp);
+        sort(a,a+n,actcomp);
         
         int count=1;
         
         j=0;
-        for(i=1;i<siz.si;i++)
+        for(i=1;i<n;i++)
         {
             if(a[i].start>a[j].finish)
             {
